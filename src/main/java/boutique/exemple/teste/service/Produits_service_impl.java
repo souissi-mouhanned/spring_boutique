@@ -30,17 +30,17 @@ public class Produits_service_impl implements Produit_service{
 		 
 		return null;
 	}
-	//kamelleha ya mariem ("hannni mariem bil a mouch bil e")
+	 
 	@Override
 	public String Delete_categorie(long id) {
-	 
-		return null;
+		categorie_repo.deleteById(id);
+		return "categorie deleted";
 	}
 	//kamelleha ya mariem ("hannni mariem bil a mouch bil e")
 	@Override
 	public Categorie Update_categorie(Categorie cat) {
-		 
-		return null;
+		categorie_repo.save(cat);
+		return cat;
 	}
 	//kamelleha ya mariem ("hannni mariem bil a mouch bil e")
 	@Override
